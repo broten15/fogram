@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trying to get feed to work</title>
+    <style>
+        img {
+            width: 25%;
+            height: auto;
+
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 300px;
+        }
+    </style>
 </head>
     <div class="Content">
         {% for post in posts %}
             <h3>{{ post.owner }}</h3>
-            <img src="{{ post.image.url }}" />
+            <img src="{{ post.image.url }}" width="256" height="256"/>
             <p>{{ post.description }}</p>
             <p>{{ post.date_added }}</p>
         {% empty %}
