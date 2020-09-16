@@ -17,6 +17,12 @@
     </style>
 </head>
     <div class="Content">
+        <!-- temporay logout button -->
+        <form class="logout-link" action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+        </form>
+
         {% for post in posts %}
             <h3>{{ post.owner }}</h3>
             <img src="{{ post.image.url }}" width="256" height="256"/>
