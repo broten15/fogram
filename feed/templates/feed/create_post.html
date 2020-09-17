@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post creation page</title>
+</head>
+    <div class="create-post">
+        <h1>The post creation page works</h1>
+        <form class="site-form" action="{% url 'create post' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Create">
+        </form>
+    </div>
+<body>
+    
+</body>
+</html>
